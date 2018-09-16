@@ -6,8 +6,9 @@ target 'Project' do
   use_frameworks!
 
   # Pods for Project
-
-	
+	pod 'Alamofire'
+	pod 'Kingfisher', '~> 4.0'
+	pod 'SwiftyJSON'
 
   target 'ProjectTests' do
     inherit! :search_paths
