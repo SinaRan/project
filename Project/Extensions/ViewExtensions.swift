@@ -14,6 +14,7 @@ extension UIView {
         let effectView = UIView(frame: self.frame)
         effectView.backgroundColor = UIColor.darkGray
         effectView.alpha = 0.3
+        effectView.tag = 1001
         self.addSubview(effectView)
     }
     func removeEffectView(){

@@ -33,6 +33,7 @@ class DeliveryVC: UIViewController,DeliveryInteractorDatasource {
         mapView.layer.cornerRadius = 10
         mapView.layer.masksToBounds = true
         mapView.addSubview(mapViewContorller.view)
+        mapViewContorller.delegate = self
     }
     func initialTable(){
         table = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height) , style: UITableViewStyle.plain)
@@ -73,13 +74,23 @@ extension DeliveryVC:UITableViewDelegate,UITableViewDataSource {
         self.navigationController?.view.addEfectView()
         navigationController?.view.addSubview(mapView)
         mapViewContorller.addAnnotation(model: items[indexPath.row])
+        tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.top, animated: true)
         UIView.animate(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
             self.mapView.transform = CGAffineTransform(translationX: 0, y: -290)
         }) { (_) in
-            
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 76
+    }
+}
+
+extension DeliveryVC:MapDelegate {
+    func didCloseMap() {
+        self.navigationController?.view.removeEffectView()
+        UIView.animate(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            self.mapView.transform = CGAffineTransform(translationX: 0, y: 290)
+        }) { (_) in
+        }
     }
 }
