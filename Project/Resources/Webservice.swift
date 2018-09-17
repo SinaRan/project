@@ -15,6 +15,10 @@ struct Webservice {
     static let base = "https://mock-api-mobile.dev.lalamove.com"
     static let deliveries = "\(base)/deliveries"
     
+    
+    /// This function create a session manager from Alamofire with custom settings.
+    ///
+    /// - Returns: A shared manager created from Alamofire.
     static func sharedManager()->SessionManager{
         struct singletone {
             static let sharedManager: SessionManager = {
@@ -26,7 +30,17 @@ struct Webservice {
         }
         return singletone.sharedManager
     }
+    
+    /// This function sends request to server and decide if request is a success or not.
+    ///
+    /// - Parameters:
+    ///   - url: A URL which request sends to.
+    ///   - method: HTTP Method which api accepts. eg. post,get,patch and ...
+    ///   - params: Parameters which attachs to request.
+    ///   - encoding: An encoding which shows how parameters should send. eg. If parameters needs to send as a query string in post use URLEncoding.queryString.
+    ///   - completionHandler: A completion handler which returns (success,statusCode,json and jsonString) of a request.
     static func serverRequest(url:String,method:HTTPMethod = .get,params:[String:Any]?,encoding:ParameterEncoding=URLEncoding.default,_ completionHandler:@escaping CompletionHandler){
+        
         Webservice.sharedManager().request(url, method: method ,parameters:params,encoding:encoding).responseJSON { response in
             if response.response != nil {
                 if response.response!.statusCode == 200 {

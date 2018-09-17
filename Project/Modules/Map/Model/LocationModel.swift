@@ -19,6 +19,12 @@ struct LocationModel {
         self.lng = lng
         self.address = address
     }
+    
+    
+    /// This function parses json into LocationModel.
+    ///
+    /// - Parameter json: A json in order to parse to model.
+    /// - Returns: A LocationModel parsed from JSON.
     func jsonParser(json:JSON)->LocationModel{
         return LocationModel(lat: json["lat"].doubleValue, lng: json["lng"].doubleValue, address: json["address"].stringValue)
     }

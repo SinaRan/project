@@ -20,6 +20,11 @@ struct DeliveryModel {
     
     init(){}
     
+    /// This function send a request to server in order to fetch list of `deliveries`.
+    ///
+    /// - Parameters:
+    ///   - offset: Index of requested `deliveries`.
+    ///   - limit: Numbrt of `deliveries` requested.
     func fetchDeliveries(offset:Int=0,limit:Int=20){
         let param = ["offset":offset,"limit":limit]
         Webservice.serverRequest(url: Webservice.deliveries, method: HTTPMethod.get, params: param) { (success, statusCode, json, jsonString) in
@@ -37,6 +42,10 @@ struct DeliveryModel {
         }
     }
     
+    /// This function parses json to DeliveryModel.
+    ///
+    /// - Parameter json: A JSON in order to parse to model.
+    /// - Returns: A DeliveryModel parsed from JSON.
     func jsonParser(json:JSON)->DeliveryModel{
         var model = DeliveryModel()
         model.id = json["id"].intValue
