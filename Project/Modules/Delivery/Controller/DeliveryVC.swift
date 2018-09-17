@@ -47,12 +47,8 @@ class DeliveryVC: UIViewController,DeliveryInteractorDatasource {
         table.register(DeliveryCell.self, forCellReuseIdentifier: "cell")
     }
     func didFetchDeliveries(success: Bool, items: [DeliveryModel]) {
-        if success {
-            if success {
-                self.items = items
-                self.table.reloadData()
-            }
-        }
+        self.items = items
+        self.table.reloadData()
     }
 }
 

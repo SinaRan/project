@@ -24,6 +24,7 @@
 		274339C8214E42B30011C1EB /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274339C7214E42B30011C1EB /* ViewExtensions.swift */; };
 		274339CA214E45D10011C1EB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 274339C9214E45D10011C1EB /* MapKit.framework */; };
 		279F9EC7214F6FA1004C6B3B /* MapProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279F9EC6214F6FA1004C6B3B /* MapProtocols.swift */; };
+		279F9EC9214F7376004C6B3B /* FileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279F9EC8214F7376004C6B3B /* FileManagement.swift */; };
 		55FF65A22212C339B33149FA /* Pods_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D63FC6DB5AA54E33964BC696 /* Pods_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		274339C7214E42B30011C1EB /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		274339C9214E45D10011C1EB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		279F9EC6214F6FA1004C6B3B /* MapProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapProtocols.swift; sourceTree = "<group>"; };
+		279F9EC8214F7376004C6B3B /* FileManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagement.swift; sourceTree = "<group>"; };
 		640487291BA293B57B798BC4 /* Pods_ProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF378681BB0E8661A928A540 /* Pods-ProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectTests/Pods-ProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		D24DC5E9E500CEBDC74BA0D2 /* Pods-ProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectTests/Pods-ProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				2719B1F4214E1DD400D481A3 /* AppDelegate.swift */,
 				2719B1FB214E1DD500D481A3 /* Assets.xcassets */,
 				274339AD214E214D0011C1EB /* Webservice.swift */,
+				279F9EC8214F7376004C6B3B /* FileManagement.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				274339C2214E2BF60011C1EB /* DeliveryCell.swift in Sources */,
 				274339B6214E230F0011C1EB /* LocationModel.swift in Sources */,
 				279F9EC7214F6FA1004C6B3B /* MapProtocols.swift in Sources */,
+				279F9EC9214F7376004C6B3B /* FileManagement.swift in Sources */,
 				274339AE214E214D0011C1EB /* Webservice.swift in Sources */,
 				274339BE214E24A70011C1EB /* DeliveryProtocols.swift in Sources */,
 				2719B1F5214E1DD400D481A3 /* AppDelegate.swift in Sources */,

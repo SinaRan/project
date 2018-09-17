@@ -29,10 +29,10 @@ struct DeliveryModel {
                 for i in j {
                     array.append(self.jsonParser(json: i.1))
                 }
-                self.delegate?.didFetchDeliveries(success: success, items: array)
+                self.delegate?.didFetchDeliveries(success: success, items: array,jsonString: jsonString!)
             }
             else {
-                
+                self.delegate?.didFetchDeliveries(success: success, items: [DeliveryModel](),jsonString: "")
             }
         }
     }

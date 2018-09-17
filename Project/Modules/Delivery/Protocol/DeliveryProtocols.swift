@@ -10,7 +10,7 @@ import Foundation
 
 
 protocol DeliveryModelDataSource:AnyObject {
-    func didFetchDeliveries(success:Bool,items:[DeliveryModel])
+    func didFetchDeliveries(success:Bool,items:[DeliveryModel],jsonString:String)
 }
 
 protocol DeliveryInteractorDatasource:AnyObject {

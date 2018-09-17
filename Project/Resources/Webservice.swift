@@ -34,7 +34,16 @@ struct Webservice {
                         let j = JSON(json)
                         completionHandler(true, response.response!.statusCode,j,j.rawString())
                     }
+                    else {
+                        completionHandler(false, response.response!.statusCode,nil,nil)
+                    }
                 }
+                else {
+                    completionHandler(false, response.response!.statusCode,nil,nil)
+                }
+            }
+            else {
+                completionHandler(false,0,nil,nil)
             }
         }
     }
